@@ -4,6 +4,8 @@
 
 /**Versions.json
 
+*.env
+
 # IDE files
 /.idea
 /data/*
