@@ -9,11 +9,11 @@ export const db = new Database({
   dest:
     process.env.DEST === "S3"
       ? new S3Dest("./matic-data", "csv-store", {
-          region: "us-east-1",
-          endpoint: "https://s3.filebase.com",
+          region: process.env.S3_REGION,
+          endpoint: process.env.S3_ENDPOINT,
           credentials: {
-            secretAccessKey: "FLxiMxX9MZCCByLReYJ9I5AFsnsgZ7y6527xSgHm",
-            accessKeyId: "EA7CB2270DA25935F6DE",
+            secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
+            accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
           },
         })
       : new LocalDest("./data"),

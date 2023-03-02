@@ -1,17 +1,19 @@
 [tool.poetry]
-name = "data-analysis"
+name = "s3-data-analysis"
 version = "0.1.0"
-description = "Analysing Transfers of MATIC token on Ethereum mainnet"
+description = "Analysing Transfers of MATIC token on Ethereum mainnet with CSV files on S3"
 authors = ["Massimo Luraschi <massimo.lura@gmail.com>"]
 readme = "README.md"
-packages = [{include = "data_analysis"}]
+packages = [{include = "s3_data_analysis"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 pandas = "^1.5.3"
 matplotlib = "^3.7.0"
-ipython = "^8.10.0"
+ipython = "^8.11.0"
 ipykernel = "^6.21.2"
+boto3 = "^1.26.82"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
